@@ -1,30 +1,30 @@
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-            function convertDriveLink(driveLink) {
-                const regex = /\/d\/([a-zA-Z0-9_-]+)\/.*/;
-                const match = driveLink.match(regex);
-                if (match) {
-                    const fileId = match[1];
-                    return `https://drive.google.com/uc?export=view&id=${fileId}`;
-                }
-                return driveLink;
-            }
-
-
-            fetch('data/data.json')
-                .then(response => response.json())
-                .then(data => {
-                    const container = document.getElementById('listaContainer');
+    function convertDriveLink(driveLink) {
+        const regex = /\/d\/([a-zA-Z0-9_-]+)\/.*/;
+        const match = driveLink.match(regex);
+        if (match) {
+            const fileId = match[1];
+            return `https://drive.google.com/uc?export=view&id=${fileId}`;
+        }
+        return driveLink;
+    }
 
 
-                    data.forEach(profile => {
-                        const profileCard = document.createElement('div');
-                        profileCard.className = 'profileCard';
+    fetch('data/data.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('listaContainer');
 
 
-                        const directImageLink = convertDriveLink(profile.Foto);
+            data.forEach(profile => {
+                const profileCard = document.createElement('div');
+                profileCard.className = 'profileCard';
 
-                        profileCard.innerHTML = `
+
+                const directImageLink = convertDriveLink(profile.Foto);
+
+                profileCard.innerHTML = `
                                 <img class="ProfileImage" src="${directImageLink}" alt="avatar">
                                 <div class="text">
                                     <h1 class="name">${profile.Nome}</h1>
@@ -38,8 +38,8 @@
                             `;
 
 
-                        container.appendChild(profileCard);
-                    });
-                })
-                .catch(error => console.error('Error loading JSON:', error));
-        });
+                container.appendChild(profileCard);
+            });
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+});
