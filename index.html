@@ -9,10 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    
+    
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body>
-    <header><h1>2024/02 T.I Class</h1></header>
+    <header><h1>Tech Class</h1></header>
 
         <main>
             <div class="profileCard">
@@ -106,10 +108,20 @@
         </main>
     
         <footer>
-            <i class="fi fi-rr-home"></i>
-            <i class="fi fi-rr-add"></i>
-            <i class="fi fi-rr-list"></i>
-            <i class="fi fi-rr-search"></i>
+            <i title="Sobre" class="fi fi-rr-home"></i>
+            <i id="formulario" title="Formulario" class="fi fi-rr-add"></i>
+            <i title="Lista" class="fi fi-rr-list"></i>
+            <i title="Procurar" class="fi fi-rr-search"></i>
         </footer>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const formulario = document.getElementById("formulario");
+                formulario.addEventListener("click", function() {
+                    window.open("https://forms.gle/EzLPmoHmJVXRmVbj8", "_blank");
+                });
+            });
+        </script>
+        
 </body>
 </html>
