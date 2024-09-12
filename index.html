@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
 <body>
     <header><h1>Tech Class</h1></header>
 
-        <main>
+        <main id="listaContainer">
             <div class="profileCard">
                 <img class="ProfileImage" src="https://avatars.githubusercontent.com/u/111245270?v=4" alt="avatar">
                 <div class="text">
@@ -110,18 +110,10 @@
         <footer>
             <i title="Sobre" class="fi fi-rr-home"></i>
             <i id="formulario" title="Formulario" class="fi fi-rr-add"></i>
-            <i title="Lista" class="fi fi-rr-list"></i>
+            <i id="lista" title="Lista" class="fi fi-rr-list"></i>
             <i title="Procurar" class="fi fi-rr-search"></i>
         </footer>
     
-        <script>
-            document.addEventListener('DOMContentLoaded', (event) => {
-                const formulario = document.getElementById("formulario");
-                formulario.addEventListener("click", function() {
-                    window.open("https://forms.gle/EzLPmoHmJVXRmVbj8", "_blank");
-                });
-            });
-        </script>
-        
+        <script src="assets/script.js"></script>
 </body>
 </html>
