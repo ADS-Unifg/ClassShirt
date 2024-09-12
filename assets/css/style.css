@@ -68,6 +68,18 @@ footer i:hover {
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
+.profiles-container{
+    width: calc(50% - 3rem);
+    margin: 1rem;
+    padding: 10px 0 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
 .ProfileImage {
     border-radius: 100%;
     width: 100px;
