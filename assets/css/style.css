@@ -1,0 +1,183 @@
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Inria Sans", sans-serif;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+header h1{
+    font-size: 2.8rem;
+    margin: 1rem 0 1rem 0;
+}
+
+main {
+    margin-left: 1rem;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#listaContainer{
+    display: flex;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-size: 2rem;
+    z-index: 1000;
+}
+
+footer i {
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+footer i:hover {
+    transform: scale(1.09);
+}
+
+/* profile card */
+.profileCard {
+    width: calc(50% - 3rem);
+    margin: 1rem;
+    padding: 10px 0 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.profiles-container{
+    width: calc(50% - 3rem);
+    margin: 1rem;
+    padding: 10px 0 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.ProfileImage {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+
+.text {
+    height: 100%;
+    margin-left: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+    text-align: center;
+    font-weight: 700;
+}
+
+.name {
+    margin: 0;
+}
+
+.nickname {
+    margin: 4px;
+    color: rgb(85, 85, 85);
+}
+
+.buttons {
+    height: 100%;
+    margin-left: 2rem;
+    padding: 3px;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.buttons a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.buttons a i {
+    align-self: center;
+    text-align: center;
+    display: flex;
+}
+
+.buttons a:hover {
+    transform: scale(1.09);
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fcfcfc;
+        color: #000000;
+    }
+
+    header, footer {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .profileCard {
+        background-color: #ffffff;
+    }
+
+    .buttons a {
+        color: #000000;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #ffffff;
+    }
+
+    header, footer {
+        background-color: #1f1f1f;
+        color: #ffffff;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 3px 0px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px;
+    }
+
+    .profileCard {
+        background-color: #2c2c2c;
+    }
+
+    .nickname {
+        color: #bbbbbb;
+    }
+
+    .buttons a {
+        color: #ffffff;
+    }
+}
