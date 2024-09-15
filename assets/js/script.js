@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const formulario = document.getElementById("formulario");
     formulario.addEventListener("click", function() {
-        window.open("https://forms.gle/EzLPmoHmJVXRmVbj8", "_blank");
+        window.open("https://classapi-production.up.railway.app/", "_blank");
     });
 });
 
