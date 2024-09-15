@@ -182,3 +182,23 @@ footer i:hover {
         color: #ffffff;
     }
 }
+
+
+@media (max-width: 600px){
+    .profileCard{
+        width: 90%;
+    }
+    .ProfileImage{
+        width: 80px;
+        height: 80px;
+    }
+    .buttons{
+        padding: 0;
+        margin: 1rem;
+    }
+    #listaContainer{
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+}
