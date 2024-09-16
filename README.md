@@ -17,7 +17,7 @@ Para executar este site, não é necessário instalar dependências ou configura
 1. Clone este repositório:
 
    ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone https://github.com/ADS-Unifg/ClassShirt
    ```
 2. Abra o arquivo `index.html` diretamente no seu navegador ou execute o seguinte comando no terminal para abri-lo automaticamente:
 
