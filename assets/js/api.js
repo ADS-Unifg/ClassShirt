@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         <p class="nickname">${profile.Apelido}</p>
                     </div>
                     <div class="buttons">
-                        <a href="${profile.Linkedin}" target="_blank"><i class="fi fi-brands-linkedin"></i></a>
-                        <a href="${profile.Instagram}" target="_blank"><i class="fi fi-brands-instagram"></i></a>
-                        <a href="${profile.Github}" target="_blank"><i class="fi fi-brands-github"></i></a>
+                        <a class="linkedin" href="${profile.Linkedin}" target="_blank"><i class="fi fi-brands-linkedin"></i></a>
+                        <a class="instagram" href="${profile.Instagram}" target="_blank"><i class="fi fi-brands-instagram"></i></a>
+                        <a class="github" href="${profile.Github}" target="_blank"><i class="fi fi-brands-github"></i></a>
                     </div>
                 `;
 
