@@ -12,9 +12,10 @@ header {
     width: 100%;
     text-align: center;
     z-index: 1000;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-header h1{
+header h1 {
     font-size: 2.8rem;
     margin: 1rem 0 1rem 0;
 }
@@ -23,12 +24,13 @@ main {
     margin-bottom: 80px;
     flex-wrap: wrap;
     flex-direction: row;
-    flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
 }
-#listaContainer{
+#listaContainer {
     display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
 }
 
 footer {
@@ -56,7 +58,7 @@ footer i:hover {
 
 /* profile card */
 .profileCard {
-    width: calc(50% - 3rem);
+    /* width: calc(50% - 3rem); */
     max-height: 100px;
     margin: 1rem;
     padding: 10px 0 10px 15px;
@@ -66,9 +68,10 @@ footer i:hover {
     align-items: center;
     justify-content: left;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    flex: 0 0 calc(50% - 4rem);
 }
 
-.profiles-container{
+.profiles-container {
     width: calc(50% - 3rem);
     margin: 1rem;
     padding: 10px 0 10px 15px;
@@ -123,7 +126,6 @@ footer i:hover {
     font-size: 1.6rem;
     margin: 0;
     padding: 10px;
-    /* display: ; */
     align-items: center;
     transition: transform 0.3s;
 }
@@ -144,7 +146,8 @@ footer i:hover {
         color: #000000;
     }
 
-    header, footer {
+    header,
+    footer {
         background-color: #ffffff;
         color: #000000;
     }
@@ -164,10 +167,12 @@ footer i:hover {
         color: #ffffff;
     }
 
-    header, footer {
+    header,
+    footer {
         background-color: #1f1f1f;
         color: #ffffff;
-        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 3px 0px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 3px 0px,
+            rgba(255, 255, 255, 0.1) 0px 0px 0px 1px;
     }
 
     .profileCard {
@@ -183,45 +188,50 @@ footer i:hover {
     }
 }
 
-
-@media (max-width: 600px){
-    .profileCard{
+@media (max-width: 1000px) {
+    .profileCard {
+        flex: 0 0 calc(100% - 3rem);
+    }
+}
+@media (max-width: 700px) {
+    .profileCard {
         width: 90%;
     }
-    .ProfileImage{
+    .ProfileImage {
         width: 80px;
         height: 80px;
     }
-    .buttons{
+    .buttons {
         padding: 0;
         margin: 1rem;
     }
-    .name{
+    .name {
         font-size: 1.4rem;
         width: 100%;
         min-width: 50%;
     }
-    #listaContainer{
+    #listaContainer {
         margin: 0;
         padding: 0;
         display: block;
     }
 }
-@media (max-width: 400px){
-    .buttons{
+@media (max-width: 400px) {
+    .buttons {
         padding: 0;
         width: 100%;
-        margin:0 0 0 10px;
+        margin: 0 0 0 10px;
         display: flex;
         justify-content: space-around;
     }
-    .buttons a{
+    .buttons a {
         padding: 0;
     }
-    .profileCard{
+    .profileCard {
         margin: 10px;
+        width: calc(100% - 35px);
     }
-    .ProfileImage{
+    .ProfileImage {
         width: 75px;
         height: 75px;
     }
