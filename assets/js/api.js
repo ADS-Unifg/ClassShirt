@@ -17,10 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 const directImageLink = `https://classapi-production.up.railway.app/photo/${profile.ID}`;
 
                 profileCard.innerHTML = `
-                    <img class="ProfileImage" src="${directImageLink}" alt="avatar">
-                    <div class="text">
-                        <h1 class="name">${profile.Name}</h1>
-                        <p class="nickname">${profile.Apelido}</p>
+                    <div class="left">
+                        <img class="ProfileImage" src="${directImageLink}" alt="avatar">
+                        <div class="text">
+                            <div class="nameContainer">
+                                <h1 class="name">${profile.Name}</h1>
+                            </div>
+                            <p class="nickname">${profile.Apelido}</p>
+                        </div>
                     </div>
                     <div class="buttons">
                         <a class="linkedin" href="${
@@ -50,10 +54,26 @@ document.addEventListener("DOMContentLoaded", function () {
                 container.appendChild(profileCard);
             });
 
-            // funcao para verificar se o url e valido
+            // Função para verificar se o URL é válido
             function isValidUrl(url) {
                 return /^(https?:\/\/)/.test(url);
             }
+
+            // Aplicando a animação de letreiro em nomes maiores que 10 caracteres no hover
+            const nameElements = document.querySelectorAll('.name');
+            nameElements.forEach(nameElement => {
+                const nameText = nameElement.innerText;
+
+                if (nameText.length > 10) {
+                    nameElement.addEventListener('mouseover', () => {
+                        nameElement.style.animation = 'letreiro 10s linear infinite';
+                    });
+                    nameElement.addEventListener('mouseout', () => {
+                        nameElement.style.animation = 'none';
+                    });
+                }
+            });
+
         })
         .catch((error) => console.error("Error loading JSON:", error));
 });
