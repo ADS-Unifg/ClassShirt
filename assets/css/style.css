@@ -66,11 +66,15 @@ footer i:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     flex: 0 0 calc(50% - 4rem);
 }
-
+.left{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
 .profiles-container {
     width: calc(50% - 3rem);
     margin: 1rem;
@@ -98,27 +102,38 @@ footer i:hover {
     align-items: baseline;
     text-align: center;
     font-weight: 700;
+    overflow: hidden;
+    width: 70%;
 }
 
 .name {
     margin: 0;
     text-transform: capitalize;
+    width: 100%;
 }
-
+.nameContainer{
+    white-space: nowrap; 
+    overflow: hidden;
+    width: 70%; 
+    text-align: left;
+}
+.name:hover{
+    animation: none;
+}
 .nickname {
     margin: 4px;
     color: rgb(85, 85, 85);
 }
 
 .buttons {
+    width: 30%;
     height: 100%;
-    margin-left: 2rem;
     padding: 3px;
     border-radius: 5px;
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: left;
 }
 
 .buttons a {
@@ -235,4 +250,11 @@ footer i:hover {
         width: 75px;
         height: 75px;
     }
+}
+
+/* nome grande */
+
+@keyframes letreiro{
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
