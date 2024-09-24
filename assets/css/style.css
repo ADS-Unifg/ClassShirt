@@ -233,14 +233,11 @@ footer i:hover {
 }
 @media (max-width: 400px) {
     .buttons {
-        padding: 0;
-        width: 100%;
-        margin: 0 0 0 10px;
         display: flex;
         justify-content: space-around;
     }
     .buttons a {
-        padding: 0;
+        padding: 5px;
     }
     .profileCard {
         margin: 10px;
