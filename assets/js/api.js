@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("https://classapi-production.up.railway.app/all_users")
+    fetch("https://respective-bette-hublast-6447fb9d.koyeb.app/all_users")
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const profileCard = document.createElement("div");
                 profileCard.className = "profileCard";
 
-                const directImageLink = `https://classapi-production.up.railway.app/photo/${profile.ID}`;
+                const directImageLink = `https://respective-bette-hublast-6447fb9d.koyeb.app/photo/${profile.ID}`;
 
                 profileCard.innerHTML = `
                     <div class="left">
